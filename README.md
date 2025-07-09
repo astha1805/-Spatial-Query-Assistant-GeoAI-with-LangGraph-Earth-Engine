@@ -7,7 +7,8 @@ This project is a natural language-powered spatial analysis tool that enables us
 
 It uses a LangGraph-based reasoning engine built on top of ChatGroq + LangChain and integrates with Earth Engine, raster/vector GIS tools, and OpenStreetMap data.
 
-🌟 Features
+# 🌟 Features
+
 🗺 Natural language query interpretation using LLM (LLaMA3 via ChatGroq)
 
 🛰 Elevation-based raster analysis (via Google Earth Engine)
@@ -22,7 +23,7 @@ It uses a LangGraph-based reasoning engine built on top of ChatGroq + LangChain 
 
 📍 Interactive map rendering using Folium in Streamlit
 
-📥 Sample Queries
+# 📥 Sample Queries
 
 “Give me areas below 50m in Kerala”
 
