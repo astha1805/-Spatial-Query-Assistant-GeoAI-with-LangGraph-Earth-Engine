@@ -9,17 +9,27 @@ It uses a LangGraph-based reasoning engine built on top of ChatGroq + LangChain 
 
 🌟 Features
 🗺 Natural language query interpretation using LLM (LLaMA3 via ChatGroq)
+
 🛰 Elevation-based raster analysis (via Google Earth Engine)
+
 📍 Vector buffer and spatial operations (via GeoPandas & OSMnx)
+
 🌧 Flood-safe zone extraction using raster masks
+
 ✅ Suitability and ranking toolkits for spatial planning
+
 🧩 Chain-of-thought logging for explainable reasoning
+
 📍 Interactive map rendering using Folium in Streamlit
 
 📥 Sample Queries
+
 “Give me areas below 50m in Kerala”
+
 “Show flood-safe areas in Chennai”
+
 “Top 5 suitable regions for housing in Uttarakhand”
+
 “Buffer 1km around Pune city center”
 
 🔁 How It Works
