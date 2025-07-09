@@ -1,4 +1,4 @@
-# -Spatial-Query-Assistant-GeoAI-with-LangGraph-Earth-Engine
+# -Spatial Query Assistant GeoAI with LangGraph and Earth Engine
 This project is a natural language-powered spatial analysis tool that enables users to ask complex geospatial questions like:
 
 “Show me areas in Gujarat below 50 meters elevation”
