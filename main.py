@@ -19,7 +19,7 @@ os.makedirs("data", exist_ok=True)
 
 # Initialize LLM and Earth Engine
 llm = ChatGroq(model="llama3-8b-8192")
-ee.Authenticate()
+ee.Authenticate(auth_mode='notebook')
 ee.Initialize()
 
 # ---------------------- Helpers ----------------------
@@ -121,7 +121,7 @@ def reasoning_node(state):
         state["cot_log"].append(f"Extracted hazard threshold: {comparison} {threshold}m")
 
         # Path to hazard mask (make it dynamic)
-        hazard_mask_path = f"data/{state['region']}mask{comparison}_{threshold}m.tif"
+        hazard_mask_path = f"data/{state['region']}_mask_{comparison}_{threshold}m.tif"
         state["hazard_mask_path"] = hazard_mask_path
         state["region_path"] = region_path
 

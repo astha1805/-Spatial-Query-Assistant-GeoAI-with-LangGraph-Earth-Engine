@@ -37,6 +37,15 @@ if final:
     style_fn = None
     legend_html = ""
 
+    # 🧪 Debugging Information
+    st.subheader("🧪 Debugging Information")
+    st.write("🧭 Map Path from state:", map_path)
+    st.write("📂 File Exists:", os.path.exists(map_path) if map_path else False)
+    if os.path.exists("data"):
+        st.write("📁 Files in /data/:", os.listdir("data"))
+    else:
+        st.write("🚫 'data' directory not found!")
+
     if map_path and os.path.exists(map_path):
         # Conditional styling and legend
         if "safe_zones" in map_path:
@@ -90,9 +99,9 @@ if final:
                 folium.GeoJson(
                     gdf,
                     name="Geo Output",
-                    style_function=style_fn if style_fn else None,
-                    tooltip=folium.GeoJsonTooltip(fields=[], aliases=["Feature"])
+                    style_function=style_fn if style_fn else None
                 ).add_to(m)
+
 
                 if legend_html:
                     m.get_root().html.add_child(folium.Element(legend_html))

@@ -45,7 +45,7 @@ def raster_tool_fn(state):
                 "nodata": 0
             })
 
-            raster_out_path = f"data/{state['region']}mask{comparison}_{threshold}m.tif"
+            raster_out_path = f"data/{state['region']}_mask_{comparison}_{threshold}m.tif"
             with rasterio.open(raster_out_path, "w", **meta) as dst:
                 dst.write(mask_arr, 1)
 
@@ -69,7 +69,7 @@ def raster_tool_fn(state):
                 }
 
             vector_output = gpd.GeoDataFrame(geometry=geoms, crs=region.crs)
-            vector_out_path = f"data/{state['region']}mask{comparison}_{threshold}m.geojson"
+            vector_out_path = f"data/{state['region']}_mask_{comparison}_{threshold}m.geojson"
             vector_output.to_file(vector_out_path, driver="GeoJSON", index=False)
 
         # Log
