@@ -33,9 +33,14 @@ It uses a LangGraph-based reasoning engine built on top of ChatGroq + LangChain 
 
 “Buffer 1km around Pune city center”
 
-🔁 How It Works
+# 🔁 How It Works
+
 LLM parses query → extracts intent, region, parameters
+
 Chooses relevant tool (raster/vector/suitability/disaster-safe)
+
 Downloads boundary & DEM from OSM/Google Earth Engine
+
 Executes geospatial logic (e.g., masking, buffering, ranking)
+
 Displays results with download + map output
